@@ -24,58 +24,52 @@
     </header>
     <main>
         <p>This is my project</p>
-        <ul id="inv-display">
-            <li>
-                <a href="" title="View card details"><img src="" alt="Image of --- card"></a>
-                <div class="namePrice">
-                    <hr>
-                    <h2>
-                        <a href="" title="View card details">Pokemon name</a>
-                        <span>$xxx</span>
-                    </h2>
-                </div>
-            </li>
-            <li>
-                <a href="" title="View card details"><img src="" alt="Image of --- card"></a>
-                <div class="namePrice">
-                    <hr>
-                    <h2>
-                        <a href="" title="View card details">Pokemon name</a>
-                        <span>$xxx</span>
-                    </h2>
-                </div>
-            </li>
-            <li>
-                <a href="" title="View card details"><img src="" alt="Image of --- card"></a>
-                <div class="namePrice">
-                    <hr>
-                    <h2>
-                        <a href="" title="View card details">Pokemon name</a>
-                        <span>$xxx</span>
-                    </h2>
-                </div>
-            </li>
-            <li>
-                <a href="" title="View card details"><img src="" alt="Image of --- card"></a>
-                <div class="namePrice">
-                    <hr>
-                    <h2>
-                        <a href="" title="View card details">Pokemon name</a>
-                        <span>$xxx</span>
-                    </h2>
-                </div>
-            </li>
-            <li>
-                <a href="" title="View card details"><img src="" alt="Image of --- card"></a>
-                <div class="namePrice">
-                    <hr>
-                    <h2>
-                        <a href="" title="View card details">Pokemon name</a>
-                        <span>$xxx</span>
-                    </h2>
-                </div>
-            </li>
-        </ul>
+        <div class="grid">
+            <ul id="inv-display">
+                <section>
+                    <li>
+                        <a href="" title="View card details"><img id="ditto" src="" alt="Image of --- card"></a>
+                        <div class="namePrice">
+                            <hr>
+                            <h2>
+                                <a id="ditto-name" title="View card details">Pokemon name</a>
+                                <span>$10</span>
+                            </h2>
+                            <h3>Moves</h3>
+                            <ul id="moves"></ul>
+                        </div>
+                    </li>
+                </section>
+                <section>
+                    <li>
+                        <a href="" title="View card details"><img id="ditto" src="" alt="Image of --- card"></a>
+                        <div class="namePrice">
+                            <hr>
+                            <h2>
+                                <a id="ditto-name" title="View card details">Pokemon name</a>
+                                <span>$10</span>
+                            </h2>
+                            <h3>Moves</h3>
+                            <ul id="moves"></ul>
+                        </div>
+                    </li>
+                </section>
+                <section>
+                    <li>
+                        <a href="" title="View card details"><img id="ditto" src="" alt="Image of --- card"></a>
+                        <div class="namePrice">
+                            <hr>
+                            <h2>
+                                <a id="ditto-name" title="View card details">Pokemon name</a>
+                                <span>$10</span>
+                            </h2>
+                            <h3>Moves</h3>
+                            <ul id="moves"></ul>
+                        </div>
+                    </li>
+                </section>
+            </ul>
+        </div>
         <div>
             <h2>Categories</h2>
             <ul id="category-display">
@@ -93,5 +87,6 @@
         <p id="date"></p>
     </footer>
     <script src="scripts/script.js"></script>
+    <script src="scripts/pokemon.js"></script>
 </body>
 </html>
