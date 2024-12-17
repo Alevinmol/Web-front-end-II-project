@@ -1,92 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Alejandro Vinay">
-    <meta name="description" content="Class project for Frontend 2 class">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alejandro Vinay" />
+    <meta name="description" content="Class project for Frontend 2 class" />
     <title>Project pocket cards</title>
-    <link rel="stylesheet" href="styles/base.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAD/AArz/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAIgAAAAAiIiIiIAAAACACIgAgAAAAIgIiAiAAAAAiIiIiIAAAACEgACEgAAAAAiICIgAAACICAiICAAAAIAIiIiIAAAAAIgAAAiAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAPOfAADgDwAAwAcAAMAHAADABwAAwAcAAMAHAACABwAAAA8AAAAPAAAABwAAx8cAAM/nAAD//wAA"
+      rel="icon"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
     <header>
-        <img src="" alt="my page logo">
-        <h1>Heart Gold Cards</h1>
-        <nav>
-            <button id="ham-menu"></button>
-            <ul class="nav-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Browse pocket cards</a></li>
-                <li><a href="#">Cards details page</a></li>
-                <li><a href="#">My cart</a></li>
-            </ul>
-        </nav>
+      <img src="" alt="my page logo" />
+      <h1>Heart Gold Cards</h1>
+      <nav>
+        <button id="menu"></button>
+        <ul class="navigation">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="pokegallery.html">Browse pocket cards</a></li>
+          <li><a href="#">Cards details page</a></li>
+          <li><a href="#">My cart</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <p>This is my project</p>
-        <div class="grid">
-            <ul id="inv-display">
-                <section>
-                    <li>
-                        <a href="" title="View card details"><img id="ditto" src="" alt="Image of --- card"></a>
-                        <div class="namePrice">
-                            <hr>
-                            <h2>
-                                <a id="ditto-name" title="View card details">Pokemon name</a>
-                                <span>$10</span>
-                            </h2>
-                            <h3>Moves</h3>
-                            <ul id="moves"></ul>
-                        </div>
-                    </li>
-                </section>
-                <section>
-                    <li>
-                        <a href="" title="View card details"><img id="ditto" src="" alt="Image of --- card"></a>
-                        <div class="namePrice">
-                            <hr>
-                            <h2>
-                                <a id="ditto-name" title="View card details">Pokemon name</a>
-                                <span>$10</span>
-                            </h2>
-                            <h3>Moves</h3>
-                            <ul id="moves"></ul>
-                        </div>
-                    </li>
-                </section>
-                <section>
-                    <li>
-                        <a href="" title="View card details"><img id="ditto" src="" alt="Image of --- card"></a>
-                        <div class="namePrice">
-                            <hr>
-                            <h2>
-                                <a id="ditto-name" title="View card details">Pokemon name</a>
-                                <span>$10</span>
-                            </h2>
-                            <h3>Moves</h3>
-                            <ul id="moves"></ul>
-                        </div>
-                    </li>
-                </section>
-            </ul>
-        </div>
-        <div>
-            <h2>Categories</h2>
-            <ul id="category-display">
-                <li><a href="">Fire</a></li>
-                <li><a href="">Ghost</a></li>
-                <li><a href="">Dragon</a></li>
-                <li><a href="">Steel</a></li>
-            </ul>
-        </div>
+      <p>This is my project</p>
+      <div class="grid">
+        <ul id="inv-display">
+          <section>
+            <li>
+              <a href="" title="View card details"
+                ><img id="ditto" src="" alt="Image of --- card"
+              /></a>
+              <div class="namePrice">
+                <hr />
+                <h2>
+                  <a id="ditto-name" title="View card details">Pokemon name</a>
+                  <span>$10</span>
+                </h2>
+                <h3>Moves</h3>
+                <ul id="moves"></ul>
+              </div>
+            </li>
+          </section>
+          <section>
+            <li>
+              <a href="" title="View card details"
+                ><img id="ditto" src="" alt="Image of --- card"
+              /></a>
+              <div class="namePrice">
+                <hr />
+                <h2>
+                  <a id="ditto-name" title="View card details">Pokemon name</a>
+                  <span>$10</span>
+                </h2>
+                <h3>Moves</h3>
+                <ul id="moves"></ul>
+              </div>
+            </li>
+          </section>
+          <section>
+            <li>
+              <a href="" title="View card details"
+                ><img id="ditto" src="" alt="Image of --- card"
+              /></a>
+              <div class="namePrice">
+                <hr />
+                <h2>
+                  <a id="ditto-name" title="View card details">Pokemon name</a>
+                  <span>$10</span>
+                </h2>
+                <h3>Moves</h3>
+                <ul id="moves"></ul>
+              </div>
+            </li>
+          </section>
+        </ul>
+      </div>
+      <div>
+        <h2>Categories</h2>
+        <ul id="category-display">
+          <li><a href="">Fire</a></li>
+          <li><a href="">Ghost</a></li>
+          <li><a href="">Dragon</a></li>
+          <li><a href="">Steel</a></li>
+        </ul>
+      </div>
     </main>
     <footer>
-        <h3>&copy; 2024 Heart Gold Cards</h3>
-        <p>heartgoldcards@example.com</p>
-        <p id="current-date"></p>
-        <p id="date"></p>
+      <h3>&copy; 2024 Heart Gold Cards</h3>
+      <p>heartgoldcards@example.com</p>
+      <p id="current-date"></p>
+      <p id="date"></p>
     </footer>
     <script src="scripts/script.js"></script>
     <script src="scripts/pokemon.js"></script>
-</body>
+  </body>
 </html>
