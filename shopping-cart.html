@@ -15,33 +15,34 @@
   </head>
   <body>
     <header>
+      <img src="" alt="my page logo" />
       <h1>Heart Gold Cards</h1>
       <nav>
         <button id="menu"></button>
         <ul class="navigation">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="pokegallery.html">Browse all pokemon</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="pokegallery.html">Browse all pokemon</a>
+          </li>
           <li><a href="#">Cards details page</a></li>
-          <li><a href="#">My cart</a></li>
+          <li><a href="shopping-cart.html" class="active">My cart</a></li>
         </ul>
       </nav>
-      <img src="images/banner.jpg" alt="my page logo" />
     </header>
-    <main>
-      <p>Choose your favorite starter pokémon and then browse all 151 pokemon</p>
-      <section class="gallery-section">
-        <ul id="pokemonList" class="pokemon-gallery"></ul>
-      </section>
-      <p>Gotta catch'em all!</p>
-      <a href="pokegallery.html" id="viewCartButton" class="view-cart-btn">View all pokemon!</a>
-    </main>
-    <footer>
-      <h3>&copy; 2024 Heart Gold Cards</h3>
-      <p>heartgoldcards@example.com</p>
-      <p id="current-date"></p>
-      <p id="date"></p>
-    </footer>
-    <script src="scripts/script.js"></script>
-    <script src="scripts/pokemon.js"></script>
   </body>
+  <main>
+    <h1>Shopping Cart</h1>
+    <ul id="cartItems" class="cart-list"></ul>
+    <p id="cartTotal">Total: $0.00</p>
+    <button id="checkoutButton">Checkout</button>
+    <a href="pokegallery.html" class="back-btn">Back to Shop</a>
+  </main>
+  <footer>
+    <h3>&copy; 2024 Heart Gold Cards</h3>
+    <p>heartgoldcards@example.com</p>
+    <p id="current-date"></p>
+    <p id="date"></p>
+  </footer>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/cart.js"></script>
 </html>

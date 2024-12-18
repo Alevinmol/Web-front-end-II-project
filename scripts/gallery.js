@@ -1,14 +1,13 @@
+let cart = JSON.parse(localStorage.getItem('cart')) || []; // Load cart from localStorage or initialize as empty
+
 // Fetch Pokémon data and create cards for the first 151 Pokémon
 async function fetchAndDisplayPokemon() {
     const pokemonList = document.getElementById('pokemonList');
-    
-    // Loop through the first 151 Pokémon
+
     for (let i = 1; i <= 151; i++) {
         try {
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
             const data = await response.json();
-            
-            // Create and append a card for the Pokémon
             const pokemonCard = createPokemonCard(data);
             pokemonList.appendChild(pokemonCard);
         } catch (error) {
@@ -19,67 +18,43 @@ async function fetchAndDisplayPokemon() {
 
 // Create a card for a single Pokémon
 function createPokemonCard(data) {
-    // Create list item
     const card = document.createElement('li');
     card.className = 'pokemon-card';
 
-    // Create link with Pokémon image
-    const link = document.createElement('a');
-    link.href = '#';
-    link.title = `View details for ${data.name}`;
     const image = document.createElement('img');
-    image.src = data.sprites.front_shiny;
+    image.src = data.sprites.front_default;
     image.alt = `Image of ${data.name}`;
-    link.appendChild(image);
+    card.appendChild(image);
 
-    // Create div for name and price
-    const namePrice = document.createElement('div');
-    namePrice.className = 'namePrice';
-
-    const hr = document.createElement('hr');
-    namePrice.appendChild(hr);
-
-    // Name and price header
     const title = document.createElement('h2');
-    title.className = 'card-title';
-    const nameLink = document.createElement('a');
-    nameLink.href = '#';
-    nameLink.id = `${data.name}-name`;
-    nameLink.title = `View details for ${data.name}`;
-    nameLink.textContent = capitalize(data.name);
-    const price = document.createElement('span');
-    price.className = 'price';
-    price.textContent = `$${(Math.random() * 10 + 1).toFixed(2)}`; // Random price
-    title.appendChild(nameLink);
-    title.appendChild(price);
-    namePrice.appendChild(title);
+    title.textContent = capitalize(data.name);
+    card.appendChild(title);
 
-    // Moves
-    const movesHeader = document.createElement('h3');
-    movesHeader.textContent = 'Moves';
-    namePrice.appendChild(movesHeader);
-    const movesList = document.createElement('ul');
-    movesList.className = 'moves-list';
+    const price = `$${(Math.random() * 10 + 1).toFixed(2)}`;
+    const priceSpan = document.createElement('span');
+    priceSpan.textContent = price;
+    card.appendChild(priceSpan);
 
-    // Display up to 5 moves
-    const moves = data.moves.slice(0, 5);
-    moves.forEach(move => {
-        const moveItem = document.createElement('li');
-        moveItem.textContent = move.move.name;
-        movesList.appendChild(moveItem);
-    });
-    namePrice.appendChild(movesList);
+    const addToCartBtn = document.createElement('button');
+    addToCartBtn.className = 'add-to-cart-btn';
+    addToCartBtn.textContent = 'Add to Cart';
+    addToCartBtn.onclick = () => addToCart(data.name, price);
+    card.appendChild(addToCartBtn);
 
-    // Append all to the card
-    card.appendChild(link);
-    card.appendChild(namePrice);
     return card;
 }
 
-// Helper function to capitalize names
+// Capitalize names
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-// Load Pokémon when the page loads
+// Add an item to the cart
+function addToCart(name, price) {
+    cart.push({ name, price });
+    localStorage.setItem('cart', JSON.stringify(cart)); // Save cart to localStorage
+    alert(`${name} has been added to the cart!`);
+}
+
+// Initialize the page
 document.addEventListener('DOMContentLoaded', fetchAndDisplayPokemon);
