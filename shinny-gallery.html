@@ -24,18 +24,18 @@
           <li>
             <a href="pokegallery.html">Browse all pokémon</a>
           </li>
-          <li><a href="shinny-gallery.html">Browse shiny pokémon</a></li>
-          <li><a href="shopping-cart.html" class="active">My cart</a></li>
+          <li><a href="shinny-gallery.html" class="active">Browse shiny pokémon</a></li>
+          <li><a href="shopping-cart.html">My cart</a></li>
         </ul>
       </nav>
     </header>
   </body>
   <main>
-    <h1>Shopping Cart</h1>
-    <ul id="cartItems" class="cart-list"></ul>
-    <p id="cartTotal">Total: $0.00</p>
-    <button id="checkoutButton">Checkout</button>
-    <a href="pokegallery.html" class="back-btn">Back to Shop</a>
+    <h1>Pokémon Shop</h1>
+    <section class="gallery-section">
+      <ul id="pokemonList" class="pokemon-gallery"></ul>
+    </section>
+    <a href="shopping-cart.html" id="viewCartButton" class="view-cart-btn">View Cart</a>
   </main>
   <footer>
     <h3>&copy; 2024 Heart Gold Cards</h3>
@@ -43,6 +43,6 @@
     <p id="current-date"></p>
     <p id="date"></p>
   </footer>
+  <script src="scripts/shinny.js"></script>
   <script src="scripts/script.js"></script>
-  <script src="scripts/cart.js"></script>
 </html>
